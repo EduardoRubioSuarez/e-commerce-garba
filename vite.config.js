@@ -18,7 +18,7 @@ export default defineConfig({
     ],
     server: {
         watch: {
-            ignored: ['**/storage/framework/views/**'],
+            ignored: ['**/storage/framework/views/**', '**/.antigravity-mcp/**', '**/vendor/**', '**/storage/app/**'],
         },
     },
 });

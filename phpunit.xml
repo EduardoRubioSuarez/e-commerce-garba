@@ -12,6 +12,9 @@
             <directory>tests/Feature</directory>
         </testsuite>
     </testsuites>
+    <groups>
+        <exclude><group>concurrency</group></exclude>
+    </groups>
     <source>
         <include>
             <directory>app</directory>
@@ -29,6 +32,12 @@
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
+        <env name="STRIPE_ENABLED" value="false" force="true"/>
+        <env name="STRIPE_LIVEMODE" value="false" force="true"/>
+        <env name="STRIPE_SECRET_KEY" value="sk_test_fixture" force="true"/>
+        <env name="STRIPE_PUBLISHABLE_KEY" value="pk_test_fixture" force="true"/>
+        <env name="STRIPE_ACCOUNT_ID" value="acct_fixture" force="true"/>
+        <env name="STRIPE_WEBHOOK_SECRET" value="whsec_fixture" force="true"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>

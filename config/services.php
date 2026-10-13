@@ -1,6 +1,18 @@
 <?php
 
 return [
+    'stripe' => [
+        'enabled' => env('STRIPE_ENABLED', false),
+        'secret' => env('STRIPE_SECRET_KEY'),
+        'publishable_key' => env('STRIPE_PUBLISHABLE_KEY'),
+        'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
+        'account_id' => env('STRIPE_ACCOUNT_ID'),
+        'livemode' => env('STRIPE_LIVEMODE', false),
+        'api_version' => '2026-08-26.dahlia',
+        'timeout' => 5,
+        'connect_timeout' => 3,
+        'safe_retry_hours' => 23,
+    ],
 
     /*
     |--------------------------------------------------------------------------

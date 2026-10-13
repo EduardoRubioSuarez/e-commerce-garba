@@ -169,7 +169,7 @@ return [
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    'secure' => env('SESSION_SECURE_COOKIE', env('APP_ENV', 'production') === 'production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -229,5 +229,9 @@ return [
     */
 
     'serialization' => 'json',
+
+    'block' => true,
+    'block_lock_seconds' => 60,
+    'block_wait_seconds' => 10,
 
 ];
